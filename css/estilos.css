@@ -1,0 +1,374 @@
+/* 
+    Projeto para trabalhar o conceito de 
+    boxmodel
+    float
+    position
+    dentre as várias propriedades
+*/
+
+/* reset de página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* mobile first */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: grey;
+}
+
+header { 
+    position: relative;
+    height: 11vh;
+    
+    background-color: black;
+}
+header input#menu {
+   display: none;
+}
+
+header input#menu:checked ~ nav {
+    display: block;
+ }
+
+header h1 {
+    margin-top: 8px;
+    float: right;
+    width: 100px;
+    height: 50px;
+    margin-right: calc(50% - (100px / 2));
+    color: white;
+    font-size: 0;
+    background-image: url("../image/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header label {
+    position: absolute;
+    padding: 8px;
+    color: white;
+}
+
+header nav {
+    display: none  ;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 10px; 
+    background-color: black;
+}
+
+header nav a {
+    display: block;
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+header nav a:hover {
+    background-color: orangered;
+}
+
+/* MAIN */
+
+main {
+    padding: 20px;
+    
+}
+
+/* sessão crie site */
+#crie-site {
+    border-bottom: 2px dotted grey;
+    padding-bottom: 20px;
+}
+
+#crie-site figure img {
+    width: 96%;
+    margin-left: -10px !important;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#crie-site h2 {
+    color: orangered;
+    font-size: 1.3rem;
+}
+
+#crie-site p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 20px 0;
+}
+
+#crie-site a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* crie produtos */
+#produtos {
+    margin-top: 20px;   
+}
+
+#produtos h2 {
+    font-size: 0;   
+}
+
+#produtos article {
+    border: 1px solid grey;
+}
+
+#produtos article h3 {
+    padding: 5px 8px;
+    background-color: orangered;
+    color: white;
+    font-size: 0.8rem;
+}
+
+#produtos article img {
+    float: left;
+    margin: 10px;
+}
+
+#produtos article p {
+    font-size: 0.8rem;
+    margin: 10px;
+}
+
+/* footer */
+footer {
+    height: 10vh;
+    margin-top: 20px;
+    background-color: black;
+    padding: 15px;
+}
+
+footer img {
+    float: left;
+    margin-top: -30px;
+}
+
+footer p {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+@media screen and (min-width: 768px){
+
+    header  h1 {
+        margin-top: 8px;
+        width: 150px;
+        height: 80px;
+        margin-right: calc(50% - (150px / 2));
+    }
+
+    header label i {
+        font-size: 4rem !important;
+    }
+
+    header nav {
+        top : 80px;
+    }
+    
+    header nav a {
+        font-size: 2rem;
+        border-radius: 8px;
+    }
+
+    #crie-site {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom-style: dotted;
+        border-width: 3px;
+    }
+
+    #crie-site h2 {
+        font-size: 3rem;
+    }
+
+    #crie-site p {
+        font-size: 2rem;
+        margin: 30px 0;
+    }
+
+    #crie-site a {
+        padding: 22px 48px;
+        font-size: 1.8rem;
+    }
+
+    #produtos article h3 {
+        padding: 20px;
+        font-size: 2em;
+    }
+
+    #produtos article img {
+        margin: 20px;
+        width: 100px;
+
+    }
+
+    #produtos article p {
+        margin: 20px;
+        font-size: 1.8rem;
+    }
+
+    footer {
+        height: 11vh;
+    }
+    footer img {
+        width : 50px;
+    }
+   
+    footer img {
+        margin-top: -42px;
+    }
+
+    footer p {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    /* HEADER */
+    header {
+        padding: 0 5% 5px 5%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    header h1, header nav, header nav a {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        margin-right: -4px;
+    }
+
+    header label {
+        display: none;
+    }
+
+    header nav {
+        position: static;
+        width: 70%;
+        margin-left: 10%;
+        padding: 0;
+    }
+
+    header nav a {
+        width: 90px;
+        padding: 40px 0 25px 0;
+        font-size: 1rem;
+        
+        border-top-left-radius:0; 
+        border-top-right-radius:0;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+    }
+
+    /* MAIN */
+
+    main, footer {
+        padding: 0 5% 20px 5%;
+    }
+
+    #crie-site {
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    #crie-site figure, #crie-site div  {
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+        width: 50%;
+    }
+
+    #crie-site div {
+        padding: 20px;
+    }
+
+    #crie-site div h2 {
+        font-size: 2rem;
+    }
+
+    #crie-site div p {
+        font-size: 1rem;
+    }
+
+    #crie-site div a {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+
+    /* produtos */
+    #produtos article {
+        display: inline-block;
+        margin-right: -4px;
+        vertical-align: top;
+        width: 32%;
+    }
+    
+    #gravacao,  #edicao {
+        margin-left: 2%;
+    }
+
+    #produtos article h3 {
+        font-size: 1rem;        
+    }
+
+    #produtos article img {
+        width: 65px;
+    }
+
+    #produtos article p {
+        margin: 20px;
+        font-size: 1rem;
+    }
+
+
+    /* footer */
+    footer {
+        margin-top: 30px;
+    }
+    footer img {
+        width: 35px;
+        margin-top: -15px;
+    }
+
+    footer p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    
+    #container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    header, main, footer {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
